@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+    static int count(int n){
+        int count=0;
+        while(n!=0){
+            count++;
+            n=n/10;
+        }
+        return count;
+    }
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int n= sc.nextInt();
+		int sum=0;
+		int temp=n;
+		while(temp!=0){
+		    int digit=temp%10;
+		    sum+=Math.pow(digit,count(n));
+		    temp=temp/10;
+		}
+		if(n==sum) System.out.print("The given number is armstrong number");
+		else System.out.print("The given number is not a armstrong number");
+	}
+}

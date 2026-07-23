@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main
+{
+    static int reverse(int n){
+        int reverse=0;
+        while(n!=0){
+            int digit=n%10;
+            reverse=reverse*10+digit;
+            n=n/10;
+        }
+        return reverse;
+    }
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int n1= sc.nextInt();
+		int sq1=n1*n1;
+		int n2=reverse(n1);
+		int sq2=n2*n2;
+		int revsq2=reverse(sq2);
+		if(sq1==revsq2) System.out.print("The given number is adam number");
+		else System.out.print("The given number is not a adam number");
+	}
+}

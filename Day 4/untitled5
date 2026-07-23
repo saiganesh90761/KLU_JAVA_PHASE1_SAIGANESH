@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int n=sc.nextInt();
+		int row,col;
+		for(row=0;row<n;row++,System.out.println()){
+		    for(col=0;col<n-row-1;col++)
+		    System.out.print(" ");
+		    for(col=0;col<n;col++)
+		    System.out.print("*");
+		}
+	}
+}

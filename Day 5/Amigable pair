@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+    static int factorsum(int n){
+        int sum=0;
+        for(int i=1;i<=n/2;i++){
+            if(n%i==0) sum+=i;
+        }
+        return sum;
+    }
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int n1= sc.nextInt();
+		int n2=sc.nextInt();
+		int sum1=factorsum(n1);
+		int sum2=factorsum(n2);
+		if(sum1==n2 && sum2==n1) System.out.print("The given numbers are amigable pair");
+		else System.out.print("The given numbers are not amigable pair");
+	}
+}
